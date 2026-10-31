@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Lapor Barang - TemuBarang Kampus ITPLN</title>
+</head>
+<body>
+    <header>
+        <h1>TemuBarang Kampus ITPLN</h1>
+        <p>Layanan Pelaporan Kehilangan dan Penyerahan Barang Temuan</p>
+    </header>
+
+    <nav aria-label="Navigasi Utama">
+        <ul>
+            <li><a href="index.html">Beranda &amp; Panduan</a></li>
+            <li><a href="daftar-temuan.html">Daftar Barang Temuan</a></li>
+            <li><a href="lapor-barang.html">Formulir Lapor Barang</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Formulir Pelaporan Barang</h2>
+            <p>Lengkapi formulir di bawah ini dengan data yang sebenarnya. Kolom yang memiliki tanda bintang (*) wajib diisi sebelum formulir dapat dikirimkan.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>1. Identitas Pelapor</legend>
+
+                    <p>
+                        <label for="nama_pelapor">Nama Lengkap Pelapor (*):</label><br>
+                        <input type="text" id="nama_pelapor" name="nama_pelapor" placeholder="Contoh: Najwan Zalfa Hasibuan" required>
+                    </p>
+
+                    <p>
+                        <label for="nim_pelapor">NIM / Nomor Identitas (*):</label><br>
+                        <input type="text" id="nim_pelapor" name="nim_pelapor" placeholder="Contoh: 202532040" required>
+                    </p>
+
+                    <p>
+                        <label for="email_pelapor">Alamat Email Kampus (*):</label><br>
+                        <input type="email" id="email_pelapor" name="email_pelapor" placeholder="nama@itpln.ac.id" required>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>2. Detail Laporan Barang</legend>
+
+                    <p><strong>Jenis Laporan (*):</strong></p>
+                    <p>
+                        <input type="radio" id="jenis_hilang" name="jenis_laporan" value="Kehilangan" required>
+                        <label for="jenis_hilang">Melaporkan Kehilangan Barang</label><br>
+
+                        <input type="radio" id="jenis_temuan" name="jenis_laporan" value="Penemuan">
+                        <label for="jenis_temuan">Melaporkan Penemuan Barang</label>
+                    </p>
+
+                    <p>
+                        <label for="nama_barang">Nama dan Merek Barang (*):</label><br>
+                        <input type="text" id="nama_barang" name="nama_barang" placeholder="Contoh: Mouse Wireless Logitech Hitam" required>
+                    </p>
+
+                    <p>
+                        <label for="tanggal_kejadian">Tanggal Kehilangan / Ditemukan (*):</label><br>
+                        <input type="date" id="tanggal_kejadian" name="tanggal_kejadian" required>
+                    </p>
+
+                    <p>
+                        <label for="lokasi_kampus">Lokasi Terakhir di Area Kampus (*):</label><br>
+                        <select id="lokasi_kampus" name="lokasi_kampus" required>
+                            <option value="">-- Pilih Lokasi Area Kampus --</option>
+                            <option value="Lab Multimedia">Laboratorium Multimedia</option>
+                            <option value="Ruang Kelas Gedung A">Ruang Kelas Gedung A</option>
+                            <option value="Perpustakaan">Perpustakaan Pusat</option>
+                            <option value="Kantin">Area Kantin Kampus</option>
+                            <option value="Parkiran">Area Parkir Kendaraan</option>
+                        </select>
+                    </p>
+
+                    <p><strong>Kategori Ciri Barang (Bisa pilih lebih dari satu):</strong></p>
+                    <p>
+                        <input type="checkbox" id="kat_elektronik" name="kategori_barang" value="Elektronik">
+                        <label for="kat_elektronik">Perangkat Elektronik / Aksesoris Gadget</label><br>
+
+                        <input type="checkbox" id="kat_dokumen" name="kategori_barang" value="Dokumen">
+                        <label for="kat_dokumen">Dokumen Penting / Kartu Identitas (KTM/KTP)</label><br>
+
+                        <input type="checkbox" id="kat_pribadi" name="kategori_barang" value="Perlengkapan Pribadi">
+                        <label for="kat_pribadi">Perlengkapan Pribadi (Tumbler, Jaket, Kunci)</label>
+                    </p>
+
+                    <p>
+                        <label for="deskripsi_ciri">Deskripsi Ciri Khusus Barang (*):</label><br>
+                        <textarea id="deskripsi_ciri" name="deskripsi_ciri" rows="4" cols="50" placeholder="Jelaskan warna, stiker, goresan, atau ciri spesifik lainnya..." required></textarea>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Kirim Laporan Barang</button>
+                <button type="reset">Kosongkan Formulir</button>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 TemuBarang Kampus - Disusun oleh Najwan Zalfa Hasibuan (202532040) Prodi S1 Sistem Informasi ITPLN.</p>
+    </footer>
+</body>
+</html>
